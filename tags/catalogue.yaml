@@ -88,7 +88,7 @@
   - name: load catalogue products
     tags:
     - installation
-    ansible.builtin.command: mongo --host mongodb.devidevops.online < /app/schema/catalogue.js
+    ansible.builtin.command: mongo --host 172.31.34.219 < /app/schema/catalogue.js
   - name: restart catalogue
     tags:
     - deployment
