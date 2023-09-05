@@ -1,0 +1,26 @@
+- name: DEMO on filters #we call function in ansible as filters
+  hosts: localhost
+  vars:
+    NAME: Sohit Sai
+    Greeting: Hello Devi, How are you
+    website: https://www.joindevops.com/batch-74s
+  tasks:
+  - name: convert into uppercase
+    debug:
+      msg: "Hello {{NAME | upper}}"
+
+  - name: convert into lowercase
+    debug:
+      msg: "Hello {{NAME | lower}}"
+
+  - name: printing undefined variable
+    debug:
+      msg: "{{COURSE | default('Devops')}}"
+
+  - name: extract/split hostname
+    debug:
+      msg: "{{website | urlsplit('hostname')}}"
+
+  - name: split
+    debug:
+      msg: "{{Greeting | split(',')}}"
