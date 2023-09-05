@@ -1,4 +1,4 @@
 [mongodb]
 172.31.36.102
 [mongodb:vars]
-NAME=DEV-SERVER
+NAME=PROD-SERVER
