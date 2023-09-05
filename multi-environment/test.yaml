@@ -1,0 +1,7 @@
+- name: Install mongodb
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: print variables according to environments
+    debug:
+      msg: "Hello {{NAME}}"
